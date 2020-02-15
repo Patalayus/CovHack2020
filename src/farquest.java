@@ -13,6 +13,16 @@ public class farquest {
         }else{
             charCreation("your character");
         }
+        introduction(x);
+    }
+
+    static void introduction(String y){
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+
+        System.out.println("the year is 1304, on planet Hamashi\n" +
+                "in the outer reaches of the Andromida galaxy.\n\n"
+                +y+" is about ");
     }
 
     public static void main(String []args){
