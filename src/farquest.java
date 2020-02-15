@@ -44,7 +44,7 @@ public class farquest {
         responce = sc.nextLine();
         if(responce .equals("yes")||responce.equals("Yes")||responce.equals("YES!")
                 ||responce.equals("Yes!")||responce.equals("yes!")){
-            quests.build();
+            quests.build(y);
         }else{
             introduction(y,z);
         }
