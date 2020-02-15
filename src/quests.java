@@ -23,6 +23,9 @@ public class quests {
         }
     }
 
+    /**
+     * method to generate random number through API call
+     */
     static void checkNum(int o_u){
         if(o_u < 3){
             System.out.println("You barely find anything on\n" +
@@ -45,7 +48,6 @@ public class quests {
     static void quasantine(int r) {
         Scanner sc = new Scanner(System.in);
         String secondLook;
-        //first random number generation
         checkNum(r);
 
         Random q = new Random();
@@ -54,10 +56,14 @@ public class quests {
         System.out.println("Do you look again?\n");
         secondLook = sc.nextLine();
         if(secondLook.contains("y")||secondLook.contains("Y")){
-            checkNum(ranNum1);
+            Random w = new Random();
+            int ranNum2 = w.nextInt();
+            checkNum(ranNum2);
+            shipBuild(ranNum2);
         }else{
             System.out.println("Let's just go with what\n" +
                     "you have so far...\n");
+            shipBuild(ranNum1);
         }
     }
 
@@ -72,10 +78,14 @@ public class quests {
         System.out.println("Do you look again?\n");
         secondLook = sc.nextLine();
         if(secondLook.contains("y")||secondLook.contains("Y")){
-            checkNum(ranNum1);
+            Random w = new Random();
+            int ranNum2 = w.nextInt();
+            checkNum(ranNum2);
+            shipBuild(ranNum2);
         }else{
             System.out.println("Let's just go with what\n" +
                     "you have so far...\n");
+            shipBuild(ranNum1);
         }
     }
 
@@ -90,11 +100,21 @@ public class quests {
         System.out.println("Do you look again?\n");
         secondLook = sc.nextLine();
         if(secondLook.contains("y")||secondLook.contains("Y")){
-            checkNum(ranNum1);
+            Random w = new Random();
+            int ranNum2 = w.nextInt();
+            checkNum(ranNum2);
+            shipBuild(ranNum2);
         }else{
             System.out.println("Let's just go with what\n" +
                     "you have so far...\n");
+            shipBuild(ranNum1);
         }
+    }
+
+    static void shipBuild(int ran_x){
+        System.out.println("So you start building with \n" +
+                "the "+ran_x+" pieces you've collected and scavanged...");
+
     }
 
 }
