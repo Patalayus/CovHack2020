@@ -24,7 +24,9 @@ public class quests {
     }
 
     /**
-     * method to generate random number through API call
+     * Method to generate random number through API call.
+     * This method generates a very large integer based on the testing
+     * thus far
      */
     static void checkNum(int o_u){
         if(o_u < 3){
@@ -114,7 +116,17 @@ public class quests {
     static void shipBuild(int ran_x){
         System.out.println("So you start building with \n" +
                 "the "+ran_x+" pieces you've collected and scavanged...");
-
+        if(ran_x>10000000){
+            System.out.println("This doesn't take too long,\n" +
+                    "and you end up making a rather nice\n" +
+                    "looking ship.\n" +
+                    "Now its time to put it to the test...");
+            farquest.raceTime();
+        }else{
+            System.out.println("This takes quite a while\n" +
+                    "but luckily you finish in time for the race...");
+            farquest.raceTime();
+        }
     }
 
 }

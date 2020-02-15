@@ -2,8 +2,6 @@ import java.util.Scanner;
 
 public class farquest {
 
-    quests questObject = new quests();
-
     static void charCreation(String x){
         int genVal = 0;
         Scanner scan = new Scanner(System.in);
@@ -72,4 +70,9 @@ public class farquest {
 
     }
 
+    static void raceTime(){
+        System.out.println("\nSo you startup your ship.\n" +
+                "It roars as the ignition starts and you feel\n" +
+                "like this is going to be quite a show");
+    }
 }
