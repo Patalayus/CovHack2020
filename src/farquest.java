@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class farquest {
 
+    quests questObject = new quests();
+
     static void charCreation(String x){
         int genVal = 0;
         Scanner scan = new Scanner(System.in);
@@ -20,7 +22,9 @@ public class farquest {
     }
 
     static void introduction(String y, int z){
+        Scanner sc = new Scanner(System.in);
         String w = "";
+        String responce = "";
         clearScreen();
         if(z == 1){
             w = "he";
@@ -33,9 +37,17 @@ public class farquest {
         System.out.println("the year is 3087, on planet Hamashi\n" +
                 "in the outer reaches of the Andromida galaxy.\n\n"
                 +y+" is residing in a city called Tarashima. \n"
-                +w+" have been selected by the local council to\n" +
+                +w+" has been selected by the local council to\n" +
                 "take part in a race. This race is very different\n" +
-                "to any other race ");
+                "to any other race you have heard of...");
+        System.out.println("\nYou have to make your ship and also race it!\nAre you up for the challenge?");
+        responce = sc.nextLine();
+        if(responce .equals("yes")||responce.equals("Yes")||responce.equals("YES!")
+                ||responce.equals("Yes!")||responce.equals("yes!")){
+            quests.build();
+        }else{
+            introduction(y,z);
+        }
     }
 
     public static void clearScreen() {
