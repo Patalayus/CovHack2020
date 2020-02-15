@@ -7,11 +7,11 @@ public class farquest {
         System.out.println("What gender is "+x+"?");
         String genChar = scan.nextLine();
         if(genChar.contains("F")||genChar.contains("f")){
-            System.out.println(x+" is Female.. now to get to the story");
+            System.out.println(x+" is female. now to get to the story...");
         }else if(genChar.contains("M")||genChar.contains("m")) {
-            System.out.println(x + " is Male.. now to get to the story");
+            System.out.println(x + " is male. now to get to the story...");
         }else{
-            charCreation("Your characer is");
+            charCreation("your character");
         }
     }
 
