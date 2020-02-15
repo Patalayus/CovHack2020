@@ -3,26 +3,44 @@ import java.util.Scanner;
 public class farquest {
 
     static void charCreation(String x){
+        int genVal = 0;
         Scanner scan = new Scanner(System.in);
         System.out.println("What gender is "+x+"?");
         String genChar = scan.nextLine();
         if(genChar.contains("F")||genChar.contains("f")){
             System.out.println(x+" is female. now to get to the story...");
+            genVal = 0;
         }else if(genChar.contains("M")||genChar.contains("m")) {
             System.out.println(x + " is male. now to get to the story...");
+            genVal = 1;
         }else{
             charCreation("your character");
         }
-        introduction(x);
+        introduction(x, genVal);
     }
 
-    static void introduction(String y){
+    static void introduction(String y, int z){
+        String w = "";
+        clearScreen();
+        if(z == 1){
+            w = "he";
+        }else if(z == 0){
+            w = "she";
+        }
+        /**the quest is to build your own space ship and to race it
+         * against the other competitors to a nearby planet.
+         **/
+        System.out.println("the year is 3087, on planet Hamashi\n" +
+                "in the outer reaches of the Andromida galaxy.\n\n"
+                +y+" is residing in a city called Tarashima. \n"
+                +w+" have been selected by the local council to\n" +
+                "take part in a race. This race is very different\n" +
+                "to any other race ");
+    }
+
+    public static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
-
-        System.out.println("the year is 1304, on planet Hamashi\n" +
-                "in the outer reaches of the Andromida galaxy.\n\n"
-                +y+" is about ");
     }
 
     public static void main(String []args){
