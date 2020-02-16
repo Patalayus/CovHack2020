@@ -71,8 +71,35 @@ public class farquest {
     }
 
     static void raceTime(){
+        String answer;
+        Scanner sc = new Scanner(System.in);
         System.out.println("\nSo you startup your ship.\n" +
                 "It roars as the ignition starts and you feel\n" +
-                "like this is going to be quite a show");
+                "like this is going to be quite a show.\n" +
+                "The ref looks over to you and gives you a nod.\n" +
+                "You know its time to compete in this...\n" +
+                "do you ready your ship to race?");
+        answer = sc.nextLine();
+        if(answer.equals("yes")||answer.equals("Yes")||answer.equals("YES")){
+            String go = "";
+            Scanner ad = new Scanner(System.in);
+            System.out.println("Then let the race begin!\n\n\n" +
+                    "You look above the raceline and see a massive screen displaying\n" +
+                    "the number '3' in bold text. The ref says 'prepare for\n" +
+                    "a whole load of collision...' as the number changes to '2'\n");
+            System.out.println("PRESS ANY KEY TO CONTINUE...");
+            go = ad.nextLine();
+            System.out.println("The countdown changes to '1' as the ref yells\n" +
+                    "'Go go go!! And everyone puts pedal to the metal...");
+            raceStart();
+        }else{
+            System.out.println("The race is postponed until\n" +
+                    "all contestants are ready...");
+            raceTime();
+        }
+    }
+
+    static void raceStart(){
+
     }
 }
