@@ -132,11 +132,32 @@ public class farquest {
     }
 
     static void midRace(int f_c){
+        Scanner ad = new Scanner(System.in);
         if(f_c>=1){
             System.out.println("Your ship is somewhat overheating...\n");
         }else{
             System.out.println("You speed on ahead...\n");
         }
+        System.out.println("You approach someone and come up alongside them,\n" +
+                "what do you do?\n1. Nudge their ship and knock them off course.\n" +
+                "2. Play nice and try to overtake them.\n3. Slow down and let them go forward.\n" +
+                "Please enter 1,2 or 3.");
+        int move = ad.nextInt();
+        if(move==1){
 
+        }else if(move==2){
+
+        }else if(move==3){
+
+        }else{
+            System.out.println("That is not a valid responce.\n" +
+                    "the ship knocks you off course and you crash, your ship\n" +
+                    "explodes killing you instantly.\n");
+            System.out.println("GAME OVER");
+            System.out.println("\nPRESS ANY KEY TO CONTINUE");
+            String resolve = ad.nextLine();
+            String[] arguments = new String[] {""};
+            farquest.main(arguments);
+        }
     }
 }
