@@ -100,6 +100,43 @@ public class farquest {
     }
 
     static void raceStart(){
+        int fault_counter = 0;
+        Scanner ad = new Scanner(System.in);
+        System.out.println("as the rest of the ships leave the start line\n" +
+                "you speed on too. As the engine makes quite a loud bang do\n" +
+                "you continue to accelerate? or do you glide for a while to let\n" +
+                "it cool?\nPlease press 1 or 2.\n1. Push on!\n2. Let it cool\n");
+        int x_e = ad.nextInt();
+        if(x_e==1){
+            System.out.println("\nAs you push on, the ship does not make\n" +
+                    "some very nice sounds. It drifts all over the place.\n" +
+                    "You lose control slightly while you're driving it and \n" +
+                    "a few more competitors overtake you...");
+            fault_counter +=1;
+            midRace(fault_counter);
+        }else if(x_e==2){
+            System.out.println("\nYou ease off of the accelerator and the ship\n" +
+                    "slows down and cools off slightly.\n" +
+                    "This was definitely the right move.\n");
+            midRace(fault_counter);
+        }else{
+            System.out.println("That is not a valid responce.\n" +
+                    "your ship makes more and more noise before it\n" +
+                    "explodes killing you instantly.\n");
+            System.out.println("GAME OVER");
+            System.out.println("\nPRESS ANY KEY TO CONTINUE");
+            String resolve = ad.nextLine();
+            String[] arguments = new String[] {""};
+            farquest.main(arguments);
+        }
+    }
+
+    static void midRace(int f_c){
+        if(f_c>=1){
+            System.out.println("Your ship is somewhat overheating...\n");
+        }else{
+            System.out.println("You speed on ahead...\n");
+        }
 
     }
 }
