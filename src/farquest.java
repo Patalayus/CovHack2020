@@ -90,7 +90,7 @@ public class farquest {
             System.out.println("PRESS ANY KEY TO CONTINUE...");
             go = ad.nextLine();
             System.out.println("The countdown changes to '1' as the ref yells\n" +
-                    "'Go go go!! And everyone puts pedal to the metal...");
+                    "'Go go go!!' And everyone puts pedal to the metal...");
             raceStart();
         }else{
             System.out.println("The race is postponed until\n" +
@@ -144,11 +144,28 @@ public class farquest {
                 "Please enter 1,2 or 3.");
         int move = ad.nextInt();
         if(move==1){
-
+            System.out.println("You go to nudge them but notice as you do, that they have\n" +
+                    "some kind of bomb on their ship which you are about to collide with.\n" +
+                    "Your ship explodes and you are disqualified from the race.");
+            System.out.println("GAME OVER");
+            System.out.println("\nPRESS ANY KEY TO CONTINUE");
+            String resolve = ad.nextLine();
+            String[] arguments = new String[] {""};
+            farquest.main(arguments);
         }else if(move==2){
-
+            System.out.println("You play nice and try to overtake them when you have the chance\n" +
+                    "and luckily you do later on, you are able to leave them in the dust...\n");
+            System.out.println("\nGood job!\n");
+            lastHurdle();
         }else if(move==3){
-
+            System.out.println("As you slow down your engine cuts out! The other racer leaves\n" +
+                    "you in the dust as your ship completely breaks down\n" +
+                    "and you have to quit...");
+            System.out.println("GAME OVER");
+            System.out.println("\nPRESS ANY KEY TO CONTINUE");
+            String resolve = ad.nextLine();
+            String[] arguments = new String[] {""};
+            farquest.main(arguments);
         }else{
             System.out.println("That is not a valid responce.\n" +
                     "the ship knocks you off course and you crash, your ship\n" +
@@ -159,5 +176,43 @@ public class farquest {
             String[] arguments = new String[] {""};
             farquest.main(arguments);
         }
+    }
+
+    static void lastHurdle(){
+        Scanner ad = new Scanner(System.in);
+        System.out.println("As your racing along, you notice\n" +
+                "you are in second place!\n" +
+                "The racer in front is only slightly ahead of you.\n" +
+                "What do you do?...\n1. Keep your distance, he's bound to mess up\n" +
+                "2. Accelerate forward, you can catch up to him right?\n" +
+                "3. Slow down, he might slow down too?");
+        System.out.println("Please enter 1,2 or 3");
+        int last = ad.nextInt();
+        if(last==1){
+            System.out.println("You keep your distance, and he keeps his.\n" +
+                    "times running out though and he finishes in 1st place.\n" +
+                    "This leaves you disappointed but I suppose 2nd place\n" +
+                    "isn't too bad. " +
+                    "\nCONGRATULATIONS ON 2ND PLACE.\n" +
+                    "Thanks For Playing!");
+        }else if(last==2){
+            System.out.println("You attempt to accelerate forward\n" +
+                    "but your ship wont go any faster. You end up burning\n" +
+                    "out your engine! Your ship overheats and you end up\n" +
+                    "stopping just before the finish line.\n" +
+                    "Better Luck Next Time...\n" +
+                    "Thanks For Playing!");
+        }else if(last==3){
+            System.out.println("You just slightly tap the brakes\n" +
+                    "and just in the last second a great gust of wind knocks\n" +
+                    "the racer in front off course. You end up overtaking him!\n" +
+                    "You then finish in 1st place! \n" +
+                    "CONGRATULATIONS ON 1ST PLACE.\n" +
+                    "Thanks For Playing!");
+        }else{
+            System.out.println("That is not a valid input.\nPlease re-enter...\n");
+            lastHurdle();
+        }
+
     }
 }
