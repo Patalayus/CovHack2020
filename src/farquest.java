@@ -67,7 +67,6 @@ public class farquest {
         String chaName = sc.nextLine();
         System.out.println("Welcome "+chaName+"!\n" );
         charCreation(chaName);
-
     }
 
     static void raceTime(){
@@ -209,6 +208,9 @@ public class farquest {
                     "You then finish in 1st place! \n" +
                     "CONGRATULATIONS ON 1ST PLACE.\n" +
                     "Thanks For Playing!");
+        }else if(last==4){
+            System.out.println("You shouldn't have entered that...");
+            lastHurdle();
         }else{
             System.out.println("That is not a valid input.\nPlease re-enter...\n");
             lastHurdle();
