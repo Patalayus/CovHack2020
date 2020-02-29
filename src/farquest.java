@@ -185,7 +185,7 @@ public class farquest {
                 "What do you do?...\n1. Keep your distance, he's bound to mess up\n" +
                 "2. Accelerate forward, you can catch up to him right?\n" +
                 "3. Slow down, he might slow down too?");
-        System.out.println("Please enter 1,2 or 3");
+        System.out.println("Please enter 1, 2, 3 or 4");
         int last = ad.nextInt();
         if(last==1){
             System.out.println("You keep your distance, and he keeps his.\n" +
@@ -215,6 +215,14 @@ public class farquest {
             System.out.println("That is not a valid input.\nPlease re-enter...\n");
             lastHurdle();
         }
-
     }
+
+    static void hiddenMethod(){
+        System.out.println("this is a hidden easter egg from the game\n"+
+        "it turns out the cake.. is actually a lie.");
+        System.out.println("You notice as you look down in the car you are travelling in\n"+
+        "as you see a small bit of cake and as you go down to reach it your car smashes into a wall...");
+        hiddenfile.hiddenMethod2();
+    }
+
 }
