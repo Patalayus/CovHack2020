@@ -24,12 +24,28 @@ public class hiddenfile{
                     "the whole time...");
             portal_start();
         }else{
-            System.out.println("That is not a valid responce, please enter one...\n");
+            System.out.println("That is not a valid response, please enter one...\n");
             hiddenMethod2();
         }
     }
     static void portal_start(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("You overhear a robotic voice coming from outside\n" +
+                "of the simulation...\n" +
+                "'Ah it appears the program was created with a bug...'\n" +
+                "It says...\n");
+        System.out.println("What do you say in reply?..\n1. 'Hello? Who's there?'\n" +
+                "2. 'Who are you?'\n3. 'What's going on?'\n");
+        int resp_ = sc.nextInt();
+        if(resp_ == 1){
 
+        }else if(resp_ == 2){
+
+        }else if(resp_ == 3){
+
+        }else{
+
+        }
     }
 
 }
